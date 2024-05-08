@@ -35,11 +35,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         )
       ]),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            _listUsers(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              _listUsers(),
+            ],
+          ),
         ),
       ),
     );
@@ -49,7 +51,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final users = ref.watch(userListControllerNotifierProvider);
 
     return ListView.separated(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
+        physics: const NeverScrollableScrollPhysics(),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 30),
         shrinkWrap: true,
         itemBuilder: (context, index) {
           final user = users[index];
