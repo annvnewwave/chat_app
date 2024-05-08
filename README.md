@@ -1,17 +1,21 @@
 # chat_app
 
-This is chat app
+Here is Chat App using Flutter and Firebase
+
+## Demo
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Dependencies
 
-A few resources to get you started if this is your first Flutter project:
+1. [flutter_hooks](https://pub.dev/packages/flutter_hooks)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. [hooks_riverpod](https://pub.dev/packages/hooks_riverpod)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# chat_app
+1. [go_router](https://pub.dev/packages/go_router)
+
+1. [firebase_core](https://pub.dev/packages/firebase_core)
+
+1. [firebase_auth](https://pub.dev/packages/firebase_auth)
+
+1. [loading_indicator](https://pub.dev/packages/loading_indicator)
