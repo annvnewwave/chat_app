@@ -2,6 +2,8 @@ import 'package:chat_app/core/router/app_router.dart';
 import 'package:chat_app/core/translation/l10n.dart';
 import 'package:chat_app/features/authentication/domain/entities/auth_entity.dart';
 import 'package:chat_app/features/authentication/presentation/controller/login_controller.dart';
+import 'package:chat_app/features/authentication/presentation/state/login_state.dart';
+import 'package:chat_app/shared/widgets/app_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -19,26 +21,34 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final state = ref.watch(loginControllerNotifierProvider);
+
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
+        forceMaterialTransparency: true,
         title: Text(
           lang.login,
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
-      body: Center(
-        child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              _formInput(),
-              _buttonLogin(),
-              _register(),
-              const SizedBox(height: 50),
-            ],
+      body: Stack(
+        children: [
+          Center(
+            child: Container(
+              margin: const EdgeInsets.symmetric(horizontal: 16),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _formInput(),
+                  _buttonLogin(),
+                  _register(),
+                ],
+              ),
+            ),
           ),
-        ),
+          if (state is LoginStateLoading) const AppLoader()
+        ],
       ),
     );
   }

@@ -162,6 +162,48 @@ abstract class S {
   /// In en, this message translates to:
   /// **'Enter email and password to register'**
   String get enterEmailAndPasswordToRegister;
+
+  /// No description provided for @userNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'User not found'**
+  String get userNotFound;
+
+  /// No description provided for @wrongPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Wrong password'**
+  String get wrongPassword;
+
+  /// No description provided for @errorOccured.
+  ///
+  /// In en, this message translates to:
+  /// **'An error occured. Please try again later'**
+  String get errorOccured;
+
+  /// No description provided for @emailAddressIsAlreadyInUse.
+  ///
+  /// In en, this message translates to:
+  /// **'Email address is already in use'**
+  String get emailAddressIsAlreadyInUse;
+
+  /// No description provided for @invalidEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Email address is not valid'**
+  String get invalidEmail;
+
+  /// No description provided for @weakPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Password is not strong enough'**
+  String get weakPassword;
+
+  /// No description provided for @emailOrPasswordWrong.
+  ///
+  /// In en, this message translates to:
+  /// **'Email or password is incorrect'**
+  String get emailOrPasswordWrong;
 }
 
 class _SDelegate extends LocalizationsDelegate<S> {

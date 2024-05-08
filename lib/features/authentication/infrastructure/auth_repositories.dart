@@ -1,3 +1,5 @@
+import 'package:chat_app/core/helper/helper.dart';
+import 'package:chat_app/core/translation/l10n.dart';
 import 'package:chat_app/features/authentication/data/auth_services.dart';
 import 'package:chat_app/features/authentication/domain/entities/auth_entity.dart';
 import 'package:chat_app/features/authentication/domain/repositories/auth_repositories_interface.dart';
@@ -19,11 +21,14 @@ class AuthRepositories implements AuthRepositoriesInterface {
       return result?.user;
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
-        throw AuthException('User not found');
+        Helper.showInSnackBar(lang.userNotFound);
+        return null;
       } else if (e.code == 'wrong-password') {
-        throw AuthException('Wrong password');
+        Helper.showInSnackBar(lang.wrongPassword);
+        return null;
       } else {
-        throw AuthException('An error occured. Please try again later');
+        Helper.showInSnackBar(lang.emailOrPasswordWrong);
+        return null;
       }
     }
   }
@@ -38,13 +43,17 @@ class AuthRepositories implements AuthRepositoriesInterface {
       return result?.user;
     } on FirebaseAuthException catch (e) {
       if (e.code == 'email-already-in-use') {
-        throw AuthException('Email address is already in use');
+        Helper.showInSnackBar(lang.emailAddressIsAlreadyInUse);
+        return null;
       } else if (e.code == 'invalid-email') {
-        throw AuthException('Email address is not valid');
+        Helper.showInSnackBar(lang.invalidEmail);
+        return null;
       } else if (e.code == 'weak-password') {
-        throw AuthException('Password is not strong enough');
+        Helper.showInSnackBar(lang.weakPassword);
+        return null;
       } else {
-        throw AuthException('An error occured. Please try again later');
+        Helper.showInSnackBar(lang.errorOccured);
+        return null;
       }
     }
   }

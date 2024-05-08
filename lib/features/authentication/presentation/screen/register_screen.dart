@@ -2,6 +2,8 @@ import 'package:chat_app/core/router/app_router.dart';
 import 'package:chat_app/core/translation/l10n.dart';
 import 'package:chat_app/features/authentication/domain/entities/auth_entity.dart';
 import 'package:chat_app/features/authentication/presentation/controller/register_controller.dart';
+import 'package:chat_app/features/authentication/presentation/state/register_state.dart';
+import 'package:chat_app/shared/widgets/app_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -19,8 +21,12 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final state = ref.watch(registerControllerNotifierProvider);
+
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
+        forceMaterialTransparency: true,
         title: Text(
           lang.register,
           style: const TextStyle(fontWeight: FontWeight.bold),
@@ -32,18 +38,23 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
           icon: const Icon(Icons.arrow_back),
         ),
       ),
-      body: Center(
-        child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              _formInput(),
-              _buttonRegister(),
-              const SizedBox(height: 50),
-            ],
+      body: Stack(
+        children: [
+          Center(
+            child: Container(
+              margin: const EdgeInsets.symmetric(horizontal: 16),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _formInput(),
+                  _buttonRegister(),
+                  const SizedBox(height: 50),
+                ],
+              ),
+            ),
           ),
-        ),
+          if (state is RegisterStateLoading) const AppLoader()
+        ],
       ),
     );
   }

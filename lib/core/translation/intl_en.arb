@@ -11,5 +11,12 @@
   "password": "Password",
   "youDontHaveAnAccount": "You don't have an account?",
   "enterEmailAndPasswordToLogin": "Enter email and password to login",
-  "enterEmailAndPasswordToRegister": "Enter email and password to register"
+  "enterEmailAndPasswordToRegister": "Enter email and password to register",
+  "userNotFound": "User not found",
+  "wrongPassword": "Wrong password",
+  "errorOccured": "An error occured. Please try again later",
+  "emailAddressIsAlreadyInUse": "Email address is already in use",
+  "invalidEmail": "Email address is not valid",
+  "weakPassword": "Password is not strong enough",
+  "emailOrPasswordWrong": "Email or password is incorrect"
 }

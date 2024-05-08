@@ -39,4 +39,25 @@ class SEn extends S {
 
   @override
   String get enterEmailAndPasswordToRegister => 'Enter email and password to register';
+
+  @override
+  String get userNotFound => 'User not found';
+
+  @override
+  String get wrongPassword => 'Wrong password';
+
+  @override
+  String get errorOccured => 'An error occured. Please try again later';
+
+  @override
+  String get emailAddressIsAlreadyInUse => 'Email address is already in use';
+
+  @override
+  String get invalidEmail => 'Email address is not valid';
+
+  @override
+  String get weakPassword => 'Password is not strong enough';
+
+  @override
+  String get emailOrPasswordWrong => 'Email or password is incorrect';
 }
