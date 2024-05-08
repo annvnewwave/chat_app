@@ -1,4 +1,5 @@
 import 'package:chat_app/core/router/app_router.dart';
+import 'package:chat_app/core/translation/l10n.dart';
 import 'package:chat_app/shared/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -25,7 +26,7 @@ class EmptyPlaceholderWidget extends StatelessWidget {
             const SizedBox(height: 32),
             AppButton(
               onPressed: () => context.goNamed(AppRoute.home.name),
-              text: "Go Home",
+              text: lang.goHome,
             )
           ],
         ),

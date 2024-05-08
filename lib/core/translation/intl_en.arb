@@ -1,0 +1,15 @@
+{
+  "@@locale": "en",
+  "pageNotFound": "404 - Page not found!",
+  "goHome": "Go Home",
+  "home": "Home",
+  "chat": "Chat",
+  "login": "Login",
+  "register": "Register",
+  "logout": "Logout",
+  "email": "Email",
+  "password": "Password",
+  "youDontHaveAnAccount": "You don't have an account?",
+  "enterEmailAndPasswordToLogin": "Enter email and password to login",
+  "enterEmailAndPasswordToRegister": "Enter email and password to register"
+}
