@@ -11,7 +11,7 @@ Here is Chat App using Flutter and Firebase
 
 ## Video demo
 
-https://drive.google.com/file/d/1AxSDy0mXZjYxlPÏuKOE0phGL8UM8JVJ9T/view?usp=sharing
+[https://drive.google.com/file/d/1AxSDy0mXZjYxlPÏuKOE0phGL8UM8JVJ9T/view?usp=sharing](https://drive.google.com/file/d/1AxSDy0mXZjYxlPuKOE0phGL8UM8JVJ9T/view?usp=sharing)
 
 ## Getting Started
 
