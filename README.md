@@ -5,7 +5,10 @@ Here is Chat App using Flutter and Firebase
 ## Demo
 
 <img src="https://github.com/annvnewwave/chat_app/assets/156050064/27ac501f-6d2e-4186-9691-c871e38dbb56" width="30%">
-
+<img src="https://github.com/annvnewwave/chat_app/assets/156050064/3b21ba3c-e81b-4c20-9082-290553fe0659" width="30%">
+<img src="https://github.com/annvnewwave/chat_app/assets/156050064/f3f23d9b-cba6-498a-b250-8bb99874bf436" width="30%">
+<img src="https://github.com/annvnewwave/chat_app/assets/156050064/ac6ea5a0-d002-4b0b-8c40-cdfa7df9109e" width="30%">
+<img src="https://github.com/annvnewwave/chat_app/assets/156050064/89323469-094d-43f1-8bbb-94f487e170b4" width="30%">
 
 ## Getting Started
 
