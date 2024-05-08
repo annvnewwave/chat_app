@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "660994472624",
+    "project_id": "chat-app-d5602",
+    "storage_bucket": "chat-app-d5602.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660994472624:android:c14be36efb5b25ee5f5975",
+        "android_client_info": {
+          "package_name": "com.newwave.chat_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPFWzVbX91coc89ROZaO-HnKv8Os0okA0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
